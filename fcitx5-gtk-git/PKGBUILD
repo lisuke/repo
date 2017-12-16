@@ -3,7 +3,7 @@
 # Contributor: csslayer <wengxt AT gmail com>
 
 pkgname=fcitx5-gtk-git
-pkgver=r19.c62252b
+pkgver=r25.3b28b5b
 pkgrel=2
 pkgdesc="Gtk im module for fcitx5 and glib based dbus client library"
 arch=('i686' 'x86_64')
