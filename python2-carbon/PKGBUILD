@@ -1,0 +1,47 @@
+# Maintainer: lilydjwg <lilydjwg@gmail.com>
+# Maintainer='Gilles Hamel <hamelg@laposte.net>'
+# Initial Maintainer: Augusto F. Hack <hack.augusto@gmail.com>
+pkgname=python2-carbon
+pkgver=1.1.1
+pkgrel=1
+pkgdesc='Backend data caching and persistence daemon for Graphite'
+arch=('any')
+url='https://github.com/graphite-project/carbon'
+license=('Apache')
+depends=('python2' 'python2-whisper' 'python2-twisted>=13.2.0')
+optdepends=('python2-txamqp: AMQP support')
+makedepends=('python2-setuptools')
+options=(!emptydirs)
+source=("$pkgname-$pkgver.tar.gz::https://github.com/graphite-project/carbon/archive/$pkgver.tar.gz"
+        carbon.service
+        carbon.conf)
+sha1sums=('c566bab4dc9a7c35b90f3e6203bc174c1e175c39'
+          'd10b97e9790ae5d0b4ad71243fc5f44b970d36af'
+          '977e9df9e02eba93951ee7180e440b9d6aa75950')
+backup=(etc/carbon/aggregation-rules.conf
+        etc/carbon/blacklist.conf
+        etc/carbon/carbon.amqp.conf
+        etc/carbon/carbon.conf
+        etc/carbon/relay-rules.conf
+        etc/carbon/rewrite-rules.conf
+        etc/carbon/storage-aggregation.conf
+        etc/carbon/storage-schemas.conf
+        etc/carbon/whitelist.conf)
+
+package() {
+  cd "$srcdir/carbon-$pkgver"
+  python2 setup.py install --root="$pkgdir/" --install-lib=/usr/lib/python2.7/site-packages --install-data=/var/lib/graphite --install-scripts=/usr/bin --optimize=1
+  install -D -m644 $srcdir/carbon.service $pkgdir/usr/lib/systemd/system/carbon.service
+
+  # change the directory of the config files
+  ls conf | while read conf; do
+    install -D -m644 conf/$conf $pkgdir/etc/carbon/${conf/.example}
+  done;
+  rm -r $pkgdir/var
+  mkdir -p $pkgdir/var/{lib,log}/carbon
+
+  # use our config with FHS
+  install -D -m644 $srcdir/carbon.conf $pkgdir/etc/carbon/carbon.conf
+}
+
+# vim:set ts=2 sw=2 et:
