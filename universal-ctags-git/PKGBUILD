@@ -2,7 +2,7 @@
 # Maintainer: Youmu <condy0919 at gmail dot com>
 
 pkgname=universal-ctags-git
-pkgver=r5696.38301021
+pkgver=r5761.6589ce54
 pkgrel=1
 pkgdesc="multilanguage reimplementation of the Unix ctags utility"
 arch=('x86_64' 'i686')
@@ -35,11 +35,6 @@ build() {
     --libexecdir=/usr/lib \
     --sysconfdir=/etc
   make
-}
-
-check() {
-  cd "$srcdir/$_gitname-build"
-  make -k check
 }
 
 package() {
