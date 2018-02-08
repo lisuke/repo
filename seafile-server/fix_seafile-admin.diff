@@ -1,0 +1,13 @@
+diff --git a/tools/seafile-admin b/tools/seafile-admin
+index 5e3658b..b767cce 100755
+--- a/tools/seafile-admin
++++ b/tools/seafile-admin
+@@ -683,7 +683,7 @@ def start_controller():
+ 
+ def start_seahub_gunicorn():
+     argv = [
+-        'gunicorn',
++        '/usr/lib/seahub/bin/gunicorn',
+         'seahub.wsgi:application',
+         '-c',
+         conf[CONF_SEAHUB_CONF],

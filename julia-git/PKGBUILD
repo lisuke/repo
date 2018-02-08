@@ -31,7 +31,7 @@ case $CARCH in
 esac
 
 epoch=1
-pkgver=0.7.0.DEV.3199.g1238bad60f
+pkgver=0.7.0.DEV.3750.gf8acac74c5
 pkgrel=1
 pkgdesc="Julia is a high-level, high-performance, dynamic programming language."
 arch=('any' 'i686' 'x86_64' 'armv7h' 'aarch64')
@@ -51,8 +51,8 @@ source=('git://github.com/JuliaLang/julia'
 md5sums=('SKIP'
          'b3c5a4ba02fbbfa53b7043beb0242156'
          '2222d3eabfe6040a8cca466303c86d2b'
-         'fccd6f87178fecd9249d48a2149e41f0'
-         '56cfe7e765f3fbf0ce0d540100f50424'
+         'f13c0f5ddd2ad990bb4560d9af1203ac'
+         'f90e6a0139600b182d6c36e6c7cf3492'
          '3dbb81b1dae3a9d977bd69f8354b3007')
 
 pkgver() {

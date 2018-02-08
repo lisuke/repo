@@ -7,36 +7,36 @@ _opt_features=(
 
   # Disabled by default, need to be enabled every build:
 
-  #dvd
-  #cd
-  #smb
-  #libarchive
+  dvd
+  cd
+  smb
+  libarchive
 
   # Lua is automatically detected, so you don't need to enable these if you
   # already have it installed. If you have both lua52 and luajit installed, mpv
   # will use the former. Uncommenting luajit below will tell mpv to use that
   # even if lua52 is also installed.
 
-  #lua
+  lua
   #luajit
 
   # The rest of these are autodetected, and are just provided to set
   # dependencies the first time you build. If you have the dependencies
   # installed, subsequent builds will pick them up automatically.
 
-  #x11
-  #wayland
+  x11
+  wayland
 
   #vulkan
   #shaderc # preferred SPIR-V compiler; only available as -git from AUR
 
-  #uchardet
-  #rubberband
+  uchardet
+  rubberband
 
   # Features disabled by default, but don't require any extra dependencies on an
   # Arch system: (should these just be default?)
 
-  #dvbin
+  dvbin
 
 )
 
@@ -48,7 +48,7 @@ _opt_features=(
 
 pkgname=mpv-git
 _gitname=mpv
-pkgver=0.28.0_139_gdba143de4d
+pkgver=0.28.0_227_gb01623e0d2
 pkgrel=1
 pkgdesc='Video player based on MPlayer/mplayer2 (git version)'
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
@@ -68,6 +68,17 @@ md5sums=('SKIP'
          'ffb774b13decbefc62908dda0332046b')
 sha256sums=('SKIP'
             'ce974e160347202e0dc63f6a7a5a89e52d2cc1db2d000c661fddb9dc1d007c02')
+
+# vulkan-icd-loader contains vulkan.pc, which makes mpv think it can build
+# against Vulkan. However, the headers required to actually do so are in another
+# package, vulkan-headers, for whatever reason. Building with only the former
+# installed will fail. So if we see the .pc installed, make sure the headers are
+# too.
+#
+# See also: https://bugs.archlinux.org/task/56238
+if pkg-config --exists vulkan; then
+  makedepends+=('vulkan-headers')
+fi
 
 _opt_extra_flags=()
 
