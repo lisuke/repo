@@ -1,9 +1,9 @@
 # Maintainer: Maxime Gauduin <alucryd@archlinux.org>
 
 pkgname=rpcs3-git
-pkgver=0.0.4.r321.5b5f2d424
+pkgver=0.0.4.r347.95c6ac699
 pkgrel=1
-pkgdesc='A Sony PlayStation 3 emulator'
+pkgdesc='A Sony PlayStation 3 emulator (Sandy Bridge CPU and up)'
 arch=('x86_64')
 url='https://github.com/RPCS3/rpcs3'
 license=('GPL2')
@@ -52,6 +52,8 @@ prepare() {
   git submodule update 3rdparty/{GSL,hidapi,Optional,pugixml} asmjit Vulkan/{glslang,Vulkan-LoaderAndValidationLayers}
 
   popd
+
+  sed -i 's/native/sandybridge/g' rpcs3/CMakeLists.txt
 
   if [[ -d build ]]; then
     rm -rf build

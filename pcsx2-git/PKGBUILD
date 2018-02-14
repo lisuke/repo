@@ -3,9 +3,9 @@
 # Contributor: Themaister <maister@archlinux.us>
 
 pkgname=pcsx2-git
-pkgver=1.5.0.r2283.5fdc9da88
+pkgver=1.5.0.r2286.41c49faa8
 pkgrel=1
-pkgdesc='A Sony PlayStation 2 emulator'
+pkgdesc='A Sony PlayStation 2 emulator (Generic)'
 arch=('x86_64')
 url='http://www.pcsx2.net'
 license=('GPL2' 'GPL3' 'LGPL2.1' 'LGPL3')
@@ -38,6 +38,7 @@ build() {
   mkdir build && cd build
 
   cmake .. \
+    -DDISABLE_ADVANCE_SIMD='TRUE' \
     -DCMAKE_BUILD_TYPE='Release' \
     -DCMAKE_TOOLCHAIN_FILE='cmake/linux-compiler-i386-multilib.cmake' \
     -DCMAKE_INSTALL_PREFIX='/usr' \
