@@ -1,8 +1,8 @@
 # Maintainer: Bruce Zhang <zttt183525594@gmail.com>
 _pkgname=feeluown
 pkgname=${_pkgname}-git
-pkgver=r1633.d3fe652
-pkgrel=1
+pkgver=r1642.41bb8ba
+pkgrel=2
 epoch=2
 pkgdesc="FeelUOwn Music Player (Master branch)"
 arch=('any')
