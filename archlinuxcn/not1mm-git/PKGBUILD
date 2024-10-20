@@ -2,8 +2,8 @@
 # Contributor: f4iey <f4iey@f4iey.fr>	
 
 pkgname=not1mm-git
-pkgver=r1518.c1b5e01
-pkgrel=1
+pkgver=r1531.bb51db0
+pkgrel=2
 pkgdesc="Not1MM != N1MM, An amateur radio contest logger for Linux."
 arch=('any')
 license=('GPL-3.0-only')
