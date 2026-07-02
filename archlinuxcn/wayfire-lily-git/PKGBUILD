@@ -1,18 +1,19 @@
 # Maintainer: lilydjwg <lilydjwg@gmail.com>
 # Contributor: Solomon Choina <shlomochoina@gmail.com0
 pkgname=wayfire-lily-git
-pkgver=0.9.0.20231207.065445.g3b3be365
-pkgrel=1
+pkgver=0.11.0.20260630.101039.gef322743
+pkgrel=2
 pkgdesc="3D wayland compositor (lilydjwg's version)"
 arch=('x86_64')
 url="https://github.com/lilydjwg/wayfire"
 license=('MIT')
-depends=('wlroots-lily-git' 'cairo' 'pango' 'glm' 'libjpeg')
-makedepends=('git' 'meson' 'ninja' 'wayland-protocols' 'doctest')
+depends=('wlroots0.20' 'cairo' 'pango' 'glm' 'libjpeg-turbo' 'yyjson' 'libyyjson.so'
+         wlroots-lily-git # for vulkan_effects
+        )
+makedepends=('git' 'meson' 'ninja' 'wayland-protocols' 'doctest' 'vulkan-headers')
 optdepends=()
 provides=(wayfire wayfire-git)
 conflicts=(wayfire wayfire-git)
-options=(debug)
 source=(wayfire::git+$url.git)
 sha256sums=(SKIP)
 
@@ -33,6 +34,7 @@ build() {
         -Duse_system_wfconfig=disabled \
         -Duse_system_wlroots=enabled \
         -Dprint_trace=false \
+        -Dvulkan_effects=true \
         . \
         build
     ninja -C build
