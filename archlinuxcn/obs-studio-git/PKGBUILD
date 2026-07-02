@@ -5,7 +5,7 @@
 
 pkgname=obs-studio-git
 _pkgname=${pkgname%-git}
-pkgver=32.2.0beta2.r15.g7a52bed
+pkgver=32.2.0beta2.r16.ga008546
 pkgrel=1
 epoch=5
 pkgdesc="Free, open source software for live streaming and recording (with websocket support)"
