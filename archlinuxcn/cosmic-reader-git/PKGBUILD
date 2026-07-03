@@ -2,7 +2,7 @@
 pkgname=cosmic-reader-git
 _name="${pkgname%-git}"
 pkgver=r153.3148541
-pkgrel=1
+pkgrel=2
 pkgdesc='WIP COSMIC PDF reader'
 arch=('x86_64')
 url='https://github.com/pop-os/cosmic-reader'
