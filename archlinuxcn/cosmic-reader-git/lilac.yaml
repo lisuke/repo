@@ -6,4 +6,4 @@ post_build_script: |
   update_aur_repo()
 update_on:
   - source: github
-    github: pos-os/cosmic-reader
+    github: pop-os/cosmic-reader
