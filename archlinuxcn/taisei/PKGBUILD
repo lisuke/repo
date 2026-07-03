@@ -14,13 +14,20 @@ depends=(
 	'opengl-driver'
 	'cglm'
 	'sdl2_mixer'
+	'sdl3'
 	'freetype2'
+	'glibc'
+	'libgcc'
 	'libpng'
+	'libstdc++'
 	'libunibreak'
 	'libwebp'
 	'libzip'
 	'hicolor-icon-theme'
 	'openssl'
+	'opusfile'
+	'zlib'
+	'zstd'
 )
 makedepends=('meson' 'python-docutils' 'python-zstandard' 'gamemode')
 optdepends=('gamemode: GameMode integration')
