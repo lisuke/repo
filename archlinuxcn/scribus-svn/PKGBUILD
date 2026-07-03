@@ -4,13 +4,13 @@
 # Maintainer: Miguel Revilla Rodríguez <yo at miguelrevilla.com>
 
 pkgname=scribus-svn
-pkgver=27683
+pkgver=27691
 pkgrel=1
 pkgdesc="A desktop publishing program - Version from SVN"
 arch=('i686' 'x86_64')
 license=('GPL' 'LGPL')
 url="http://www.scribus.net"
-depends=(	boost
+depends=(	boost-libs
 			cairo
 			fontconfig
 			freetype2
@@ -23,7 +23,7 @@ depends=(	boost
 			libcdr
 			libcups
 			libfreehand
-			libjpeg
+			libjpeg-turbo
 			libjxl
 			libmspub
 			libpagemaker
@@ -39,6 +39,7 @@ depends=(	boost
 			podofo
 			poppler
 			python
+            python-pillow
 			qt6-5compat
 			qt6-base
 			qt6-declarative
@@ -46,7 +47,7 @@ depends=(	boost
 			qt6-svg
 			zlib
 		)
-makedepends=(cmake subversion qt6-tools)
+makedepends=(cmake subversion qt6-tools boost)
 optdepends=()
 conflicts=('scribus')
 provides=('scribus')
