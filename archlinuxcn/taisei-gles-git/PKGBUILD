@@ -58,7 +58,7 @@ prepare() {
 
 build() {
 	cd "${_pkgname}/"
-	arch-meson --auto-features auto build
+	arch-meson --auto-features auto build -Dr_gles30=enabled -Dr_default=gles30
 	ninja -C build
 }
 
