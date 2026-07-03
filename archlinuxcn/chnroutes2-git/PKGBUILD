@@ -2,7 +2,7 @@
 
 _pkgname=chnroutes2
 pkgname=$_pkgname-git
-pkgver=0.60234.8dcfeaa3
+pkgver=0.60242.6bd459e2
 pkgrel=1
 pkgdesc="Better aggregated chnroutes"
 arch=('any')
