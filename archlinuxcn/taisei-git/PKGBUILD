@@ -28,7 +28,7 @@ depends=(
 	'zlib'
 	'zstd'
 )
-makedepends=('git' 'meson' 'python-docutils' 'python-zstandard' 'gamemode')
+makedepends=('git' 'meson' 'python-docutils' 'gamemode')
 optdepends=('gamemode: GameMode integration')
 conflicts=("${_pkgname}")
 provides=("${_pkgname}")
