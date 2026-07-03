@@ -13,7 +13,6 @@ license=('MIT')
 depends=(
 	'opengl-driver'
 	'cglm'
-	'sdl2_mixer'
 	'sdl3'
 	'freetype2'
 	'glibc'
@@ -22,7 +21,6 @@ depends=(
 	'libstdc++'
 	'libunibreak'
 	'libwebp'
-	'libzip'
 	'hicolor-icon-theme'
 	'openssl'
 	'opusfile'
