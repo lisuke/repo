@@ -1,18 +1,20 @@
 repo_depends:
   - v2raya-core
 
-pre_build_script: |
-    update_pkgver_and_pkgrel(_G.newver)
+# pre_build_script: |
+#     update_pkgver_and_pkgrel(_G.newver)
 
 post_build_script: |
     git_pkgbuild_commit()
 
-update_on:
-  - source: github
-    github: v2rayA/v2rayA
-    prefix: v
-    use_latest_release: true
+# update_on:
+  # - source: github
+  #   github: v2rayA/v2rayA
+  #   prefix: v
+  #   use_latest_release: true
 
 maintainers:
   - github: RocketMaDev
     email: RocketDev <marocketbd@gmail.com>
+
+managed: false
