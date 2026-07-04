@@ -154,7 +154,7 @@ _pick() {
   done
 }
 
-package_mutter-kimiblock() {
+package_mutter-kimiblock-unstable() {
   optdepends=(
     'bash-completion: Bash completions for gdctl'
     'mutter-devkit: Mutter SDK, "MDK"'
