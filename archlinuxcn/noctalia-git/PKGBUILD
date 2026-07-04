@@ -2,7 +2,7 @@
 
 pkgname=noctalia-git
 _pkgname=noctalia
-pkgver=5.0.0.r4161.g2abf87584
+pkgver=5.0.0.r4169.g0d2c346e3
 pkgrel=2
 pkgdesc='Lightweight Wayland shell built directly on Wayland and OpenGL ES'
 arch=('x86_64')
