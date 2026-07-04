@@ -27,6 +27,7 @@ depends=(
 	'libdbusmenu-gtk3'
 	'libevdev'
 	'libinput'
+	'libmm-glib'
 	'libmpdclient'
 	'libnl'
 	'libpipewire'
