@@ -2,7 +2,7 @@
 
 pkgname=fsearch-git
 _pkgname=fsearch
-pkgver=0.3.beta2.r103.g3a9cdb62
+pkgver=0.3.beta2.r104.g18e43788
 pkgrel=1
 pkgdesc="A fast graphical file search utility. Development version."
 arch=('i686' 'x86_64')
