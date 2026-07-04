@@ -29,7 +29,12 @@ provides=("librime=${pkgver}")
 conflicts=(librime)
 
 prepare() {
-  cd librime/plugins
+  cd ${srcdir}/librime
+  # Fix simplifier crashes with OpenCC converters without conversion chains:
+  # https://github.com/rime/librime/pull/1184
+  git cherry-pick -n 96a55478ba6ae3f8e78a3c824809905745440d57
+
+  cd ${srcdir}/librime/plugins
   ln -sf "$srcdir"/librime-octagram .
   ln -sf "$srcdir"/librime-lua .
   ln -sf "$srcdir"/librime-charcode .
