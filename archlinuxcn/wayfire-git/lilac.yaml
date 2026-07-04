@@ -7,3 +7,5 @@ post_build: git_pkgbuild_commit
 update_on:
   - source: github
     github: WayfireWM/wayfire
+  - source: manual
+    manual: 1

@@ -2,8 +2,8 @@
 
 pkgname=waybar-git
 _pkgname=Waybar
-pkgver=0.15.0.r173.g0594574
-pkgrel=2
+pkgver=0.15.0.r822.g4e76d73
+pkgrel=1
 pkgdesc='Highly customizable Wayland bar for Sway and Wlroots based compositors (GIT)'
 arch=('x86_64')
 url="https://github.com/Alexays/${_pkgname}"
@@ -27,6 +27,7 @@ depends=(
 	'libdbusmenu-gtk3'
 	'libevdev'
 	'libinput'
+	'libmm-glib'
 	'libmpdclient'
 	'libnl'
 	'libpipewire'

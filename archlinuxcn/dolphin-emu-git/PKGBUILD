@@ -9,8 +9,8 @@ _noguipkgname="$_projectname-emu-nogui"
 _toolpkgname="$_projectname-emu-tool"
 pkgbase="$_mainpkgname-git"
 pkgname=("$pkgbase" "$_noguipkgname-git" "$_toolpkgname-git")
-pkgver=2606.r5.gbaf91d4436
-pkgrel=1
+pkgver=2606.r97.gd8d37fdbc4
+pkgrel=2
 pkgdesc='A Gamecube / Wii emulator'
 _pkgdescappend=' - git version'
 arch=('x86_64' 'aarch64')
@@ -18,9 +18,12 @@ url="https://$_mainpkgname.org"
 license=('GPL-2.0-or-later')
 depends=(
 	# Based on the repo package
-	'bluez-libs' 'bzip2' 'enet' 'gcc-libs' 'glibc' 'hidapi' 'libcurl.so' 'libfmt.so' 'libgl'
-	'libsfml-network.so' 'libsfml-system.so' 'libspng.so' 'ffmpeg'
-	'libusb-1.0.so' 'libx11' 'libxi' 'libxrandr' 'lz4' 'lzo' 'mbedtls2' 'pugixml'
+	# 'fmt' is listed explicitly because archlinuxcn's fmt9/fmt10 compat packages also
+	# provide libfmt.so, and pacman --noconfirm picks them first ([archlinuxcn] precedes
+	# [extra]), leaving no fmt.pc on the default pkg-config path
+	'bluez-libs' 'bzip2' 'enet' 'fmt' 'gcc-libs' 'glibc' 'hidapi' 'libcurl.so' 'libfmt.so' 'libgl'
+	'libsfml-network.so' 'libspng.so' 'ffmpeg'
+	'libusb-1.0.so' 'libx11' 'libxi' 'libxrandr' 'lz4' 'lzo' 'pugixml'
 	'sdl3' 'sfml' 'speexdsp' 'xxhash' 'xz' 'zstd'
 	# Additional dependencies to replace vendored deps
 	'cubeb' 'glslang' 'libiconv' 'minizip-ng' 'zlib-ng'
@@ -28,6 +31,9 @@ depends=(
 makedepends=(
 	'alsa-lib' 'cmake' 'git' 'libevdev' 'libminiupnpc.so' 'libpulse'
 	'libudev.so' 'ninja' 'python' 'qt6-base' 'qt6-svg' 'vulkan-headers'
+	# Dolphin has no system-lib switch for VulkanMemoryAllocator; its vendored include dir
+	# is empty (submodule not provided), so vk_mem_alloc.h is picked up from /usr/include
+	'vulkan-memory-allocator'
 )
 checkdepends=('gtest')
 optdepends=('pulseaudio: PulseAudio backend')
@@ -106,6 +112,7 @@ build() {
 		-DENABLE_AUTOUPDATE=OFF \
 		-DUSE_SYSTEM_LIBS=ON \
 		-DUSE_SYSTEM_LIBMGBA=OFF \
+        -DUSE_SYSTEM_MBEDTLS=OFF \
 		-Wno-dev
 	cmake --build 'build/'
 }

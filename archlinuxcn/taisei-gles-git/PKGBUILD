@@ -5,14 +5,32 @@
 
 pkgname=taisei-gles-git
 _pkgname=${pkgname%-gles-git}
-pkgver=1.4.r679.g77ef034
-pkgrel=1
+pkgver=1.4.r696.gc91d3d1
+pkgrel=2
 pkgdesc="Open source Touhou clone (using OpenGL ES backends)"
 arch=('i686' 'x86_64')
 url="https://taisei-project.org/"
 license=('MIT')
-depends=('opengl-driver' 'cglm' 'sdl2_mixer' 'freetype2' 'libpng' 'libwebp' 'libzip' 'hicolor-icon-theme' 'openssl' 'spirv-cross' 'shaderc')
-makedepends=('git' 'meson' 'python-docutils' 'python-zstandard' 'gamemode')
+depends=(
+	'opengl-driver'
+	'cglm'
+	'sdl3'
+	'freetype2'
+	'glibc'
+	'glslang'
+	'libgcc'
+	'libpng'
+	'libstdc++'
+	'libunibreak'
+	'libwebp'
+	'hicolor-icon-theme'
+	'openssl'
+	'opusfile'
+	'spirv-cross'
+	'zlib'
+	'zstd'
+)
+makedepends=('git' 'meson' 'python-docutils' 'gamemode')
 optdepends=('gamemode: GameMode integration')
 conflicts=("${_pkgname}")
 provides=("${_pkgname}")
@@ -21,9 +39,8 @@ source=(
 	"git+https://github.com/taisei-project/SDL_GameControllerDB.git"
 	"git+https://github.com/taisei-project/koishi.git"
 	"git+https://github.com/taisei-project/basis_universal.git"
-	"git+https://github.com/taisei-project/python-zipfile-zstd.git"
 )
-sha256sums=('SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP')
+sha256sums=('SKIP' 'SKIP' 'SKIP' 'SKIP')
 
 pkgver() {
 	cd "${_pkgname}/"
@@ -36,13 +53,12 @@ prepare() {
 	git config submodule.external/gamecontrollerdb.url "${srcdir}/SDL_GameControllerDB"
 	git config submodule.external/koishi.url "${srcdir}/koishi"
 	git config submodule.external/basis_universal.url "${srcdir}/basis_universal"
-	git config submodule.external/python-zipfile-zstd.url "${srcdir}/python-zipfile-zstd"
 	git -c protocol.file.allow=always submodule update
 }
 
 build() {
 	cd "${_pkgname}/"
-	arch-meson --auto-features auto build
+	arch-meson --auto-features auto build -Dr_gles30=enabled -Dr_default=gles30
 	ninja -C build
 }
 
