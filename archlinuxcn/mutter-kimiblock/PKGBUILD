@@ -109,13 +109,18 @@ b2sums=('2987b5e207f0a12e94b035d5b913b8a76bc291be41a71669e977ead0f93cfbb3219c97a
 prepare() {
   cd mutter
 
+	echo 5131
   git apply ../5131.patch
+
+	echo 5137
   git apply ../5137.patch
 
   #git apply ../5133.patch
 
+	echo 5157
   git apply ../5157.patch
 
+	echo 5159
   # eglgears drift
   patch -Np1 <../5159.patch
 }
