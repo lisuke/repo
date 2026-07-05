@@ -11,7 +11,6 @@ post_build: git_pkgbuild_commit
 repo_depends:
   - cubeb-git
   - game-devices-udev
-  - cpp-httplib
   - cpp-jwt
 
 update_on:
@@ -28,4 +27,4 @@ update_on:
     alpm: openssl
   - alias: boost
   - source: vcs
-    vcs:  
+    vcs:
