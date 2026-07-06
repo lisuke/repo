@@ -42,6 +42,7 @@ makedepends+=(
 	"libarchive"
 	"git"
 	"go"
+	"rust"
 )
 
 checkdepends=()

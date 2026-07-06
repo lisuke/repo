@@ -23,5 +23,9 @@ update_on:
   - source: alpm
     alpm: libgcc
     provided: libgcc_s.so
+  - source: alpm
+    alpm: libseccomp
+    provided: libseccomp.so
+    strip_release: true
 repo_depends:
   - portable-packer
