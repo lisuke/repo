@@ -3,8 +3,8 @@
 
 pkgname=hyprtoolkit-git
 _pkgname=${pkgname%-git}
-pkgver=0.5.4.r37.gf6b7b4d
-pkgrel=3
+pkgver=0.5.4.r39.gffb0d2b
+pkgrel=1
 pkgdesc="A modern C++ Wayland-native GUI toolkit"
 arch=('x86_64' 'aarch64')
 url="https://github.com/hyprwm/${_pkgname}"

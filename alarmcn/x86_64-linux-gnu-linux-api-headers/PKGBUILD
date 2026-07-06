@@ -3,7 +3,7 @@
 _target_arch=x86_64
 _target=${_target_arch}-linux-gnu
 pkgname=${_target}-linux-api-headers
-pkgver=7.1.2
+pkgver=7.1.3
 pkgrel=1
 pkgdesc="Kernel headers sanitized for use in userspace (${_target})"
 arch=(any)
@@ -11,7 +11,7 @@ url='https://www.gnu.org/software/libc'
 license=(GPL-2.0-only)
 makedepends=(rsync)
 source=(https://www.kernel.org/pub/linux/kernel/v${pkgver:0:1}.x/linux-${pkgver}.tar.xz)
-b2sums=('0d6e9ff535af085190da7df50887b20f395cd4d6befb7158c9993bf77fe92459a9982877ce944ca522192daa5a54c952c3d368def04b579796ba7109a972453b')
+b2sums=('b6466e2798627522f0339c670a223b21266f4d4ede39163867c0f122295e54c5d24093abb51d5c6c6c917de0cb199836e81f45f7c391a5cc138cac2a519438e8')
 
 build() {
   cd linux-$pkgver
