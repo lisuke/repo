@@ -11,11 +11,9 @@ url="https://github.com/an-anime-team/an-anime-game-launcher"
 license=('GPL-3.0-only')
 depends=('gtk4' 'libadwaita' 'glibc' 'hicolor-icon-theme' 'gcc-libs' 'glib2'
 	 'pango' 'xz' 'bzip2' 'cairo' 'p7zip' 'portable' 'protobuf')
-makedepends=('cargo' 'git' 'portable-packer')
+makedepends=('rust' 'git' 'portable-packer')
 optdepends=(
-	 'mangohud: FPS Overlay'
-	 'gamescope: Micro-Compositor'
-	 'gamemode: CPU Scaling Control')
+	 'mangohud: FPS Overlay')
 source=("git+$url.git"
 	"config.toml"
 	"desktop.file")
@@ -26,15 +24,15 @@ sha256sums=('SKIP'
 prepare() {
 	cd "$srcdir/an-anime-game-launcher"
 	export RUSTUP_TOOLCHAIN=stable
-    	cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+	cargo fetch --locked --target "host-tuple"
 }
 
 build() {
 	cd "$srcdir/an-anime-game-launcher"
-    	export RUSTUP_TOOLCHAIN=stable
-    	export CARGO_TARGET_DIR=target
-	export CFLAGS+=" -ffat-lto-objects"
-    	cargo build --frozen --release --target-dir target
+	export RUSTUP_TOOLCHAIN=stable
+	export CARGO_TARGET_DIR=target
+#	export CFLAGS+=" -ffat-lto-objects"
+	cargo build --release --target-dir target
 }
 
 package() {

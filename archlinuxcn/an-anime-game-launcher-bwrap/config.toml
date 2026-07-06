@@ -24,17 +24,6 @@ arguments = []
 # When enabled, lays the app private binaries on top /usr/bin, see doc/packager/08-binaries.md for more details. Requires the specific overlay directory to exist.
 overlay = true
 
-# D-Bus activation works by installing a service under /usr/share/dbus-1/services. It is used by UnifiedPush to process notifications without showing a window. You should modify the activation cmdline to call portable with "--dbus-activation".
-[busActivation]
-# Whether or not to enable D-Bus activation. Defaults to false.
-enable = false
-
-# target is the same as exec.target.
-target = "gtk4-demo"
-
-# arguments is the same as exec.arguments.
-arguments = ["--gapplication-service"]
-
 # The processes section defines how Portable tracks tasks.
 [processes]
 # Watch for spawned commands. When all of them exits, automatically terminate the sandbox. Defaults to true.
@@ -48,14 +37,17 @@ background = true
 # Whether or not an application can call Inhibit Portal to prevent automatic suspend. Defaults to false.
 inhibitSuspend = true
 
-# Whether or not to expose all GPUs and prefer discrete graphics card. By default, Portable blocks any GPU except the integrated one to improve user experience and power consumption on hybrid systems.
-gameMode = true
-
-# Enables access to the Kernel-based Virtual Machine.
-virtualization = false
-
 # Inhibit suspend and idle on behalf of applications. Requires system.inhibitSuspend being true
-inhibitOnBehalf = false
+inhibitOnBehalf = true
+
+# Specifies the "max" value of cgroup's cpu.uclamp property. This influences
+# 	frequency selection of schedutil and Energy / Capacity Aware scheduling.
+# Lower value yields more energy efficiency, while higher trades efficiency
+# 	for performance.
+# Defaults to 100, i.e. unlimited.
+uclamp = "80"
+
+deviceAllow = ["dgpu", "input"]
 
 # The network section defines behaviour of Portable's network firewall. Requires netsock for filtering.
 [network]
@@ -76,15 +68,6 @@ x11 = true
 # When false, prevents application from connecting to legacy notifications endpoint. Defaults to true.
 classicNotifications = false
 
-# When true, exposes camera devices in the sandbox. Defaults to false.
-cameras = false
-
-# When true, allows application to connect to PipeWire server. Note that a proxy is set up to prevent privileged actions. Defaults to false.
-pipeWire = false
-
-# When true, allows application to receive Input events, particularly useful for Games. Defaults to false.
-input = true
-
 # Do not use. May break apps.
 [advanced]
 zink = false
@@ -95,7 +78,7 @@ kDEStatus = false
 flatpakInfo = true
 
 # Enables landlock for additional protection, breaks many apps.
-landlock = true
+lockdown = true
 
 # Allows debugging syscalls to be made inside the sandbox. This has the potential to be exploited.
 debugging = false
