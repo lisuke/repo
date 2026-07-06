@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=Sabaki
+GenericName=Go Board and SGF Editor
+GenericName[zh_CN]=围棋棋盘与SGF编辑器
+Comment=An elegant Go board and SGF editor for a more civilized age
+Comment[zh_CN]=一款优雅的围棋棋盘与SGF编辑器
+Keywords=go;sgf;weiqi;board;
+Keywords[zh_CN]=围棋;棋谱;棋盘;
+Icon=sabaki
+Exec=sabaki %F
+Terminal=false
+MimeType=application/x-go-sgf;
+Categories=Game;BoardGame;
