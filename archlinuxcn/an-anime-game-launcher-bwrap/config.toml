@@ -16,10 +16,10 @@ stateDirectory = "AAGL_Data"
 # The exec section defines how the underlying process is started.
 [exec]
 # target defines the program to start.
-target = "an-anime-game-launcher"
+target = "env"
 
 # arguments holds an array of arguments passed to the application, this is also used when starting secondary instances.
-arguments = []
+arguments = ["-u", "GTK_IM_MODULE", "an-anime-game-launcher"]
 
 # When enabled, lays the app private binaries on top /usr/bin, see doc/packager/08-binaries.md for more details. Requires the specific overlay directory to exist.
 overlay = true
