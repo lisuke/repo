@@ -18,7 +18,7 @@ source=(
 )
 sha256sums=('47a7c726658e4896bf90e5fe5f38779b50b489292ca8be1e4a32fac9c628684d'
             '4aae9aff0199dcda177463b75f45c4c4a78b19fe6480958d2db5cdd7f89f8fee'
-            '31ad33b633744f5361abd964be306cea53ae1050e760c787115f7eca60045ae6')
+            '4c967dfe4658e693e9c47f596f2793da5d86b3ef0ba383d9ee00a2cefa5b22ad')
 
 prepare() {
     cd "${_pkgname}-${pkgver}"
@@ -28,7 +28,6 @@ prepare() {
         s/@appname@/${pkgname}/g
         s/@runname@/app.asar/g
         s/@cfgdirname@/${pkgname}/g
-        s/@options@/env ELECTRON_OZONE_PLATFORM_HINT=auto/g
     " "${srcdir}/${pkgname}.sh"
 
     export npm_config_cache="${srcdir}/npm_cache"
