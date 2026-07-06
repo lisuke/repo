@@ -9,6 +9,7 @@ provides=('an-anime-game-launcher' 'an-anime-game-launcher-portable')
 conflicts=('an-anime-game-launcher')
 url="https://github.com/an-anime-team/an-anime-game-launcher"
 license=('GPL-3.0-only')
+options=(!lto)
 depends=('gtk4' 'libadwaita' 'glibc' 'hicolor-icon-theme' 'gcc-libs' 'glib2'
 	 'pango' 'xz' 'bzip2' 'cairo' 'p7zip' 'portable' 'protobuf')
 makedepends=('rust' 'git' 'portable-packer')
