@@ -1,0 +1,73 @@
+# Maintainer: DeepChirp <deepchirp@archlinuxcn.org>
+
+pkgname=sabaki
+_pkgname=Sabaki
+pkgver=0.60.0
+_electronversion=42 # TODO: Update to 43 when electron43 is available in Arch Linux
+pkgrel=2
+pkgdesc="An elegant Go board and SGF editor for a more civilized age"
+arch=('x86_64')
+url="https://sabaki.yichuanshen.de/"
+license=('MIT')
+depends=('bash' "electron${_electronversion}" 'hicolor-icon-theme')
+makedepends=('imagemagick' 'nodejs-lts-krypton' 'npm')
+source=(
+    "${pkgname}-${pkgver}.tar.gz::https://github.com/SabakiHQ/${_pkgname}/archive/v${pkgver}.tar.gz"
+    "${pkgname}.desktop"
+    "${pkgname}.sh"
+)
+sha256sums=('47a7c726658e4896bf90e5fe5f38779b50b489292ca8be1e4a32fac9c628684d'
+            '4aae9aff0199dcda177463b75f45c4c4a78b19fe6480958d2db5cdd7f89f8fee'
+            '31ad33b633744f5361abd964be306cea53ae1050e760c787115f7eca60045ae6')
+
+prepare() {
+    cd "${_pkgname}-${pkgver}"
+
+    sed -i -e "
+        s/@electronversion@/${_electronversion}/g
+        s/@appname@/${pkgname}/g
+        s/@runname@/app.asar/g
+        s/@cfgdirname@/${pkgname}/g
+        s/@options@/env ELECTRON_OZONE_PLATFORM_HINT=auto/g
+    " "${srcdir}/${pkgname}.sh"
+
+    export npm_config_cache="${srcdir}/npm_cache"
+    export ELECTRON_SKIP_BINARY_DOWNLOAD=1
+
+    NODE_ENV=development    npm ci
+}
+
+build() {
+    cd "${_pkgname}-${pkgver}"
+
+    export npm_config_cache="${srcdir}/npm_cache"
+    export ELECTRON_SKIP_BINARY_DOWNLOAD=1
+    export SYSTEM_ELECTRON_VERSION="$(electron${_electronversion} -v | sed 's/v//g')"
+    local electronDist="/usr/lib/electron${_electronversion}"
+
+    NODE_ENV=production     npm run bundle
+    NODE_ENV=production     npm exec -c "electron-builder --linux dir -c.electronDist=${electronDist} -c.electronVersion=${SYSTEM_ELECTRON_VERSION}"
+
+    for res in 16 32 48 64 128 256 512; do
+        mkdir -p "icons-build/${res}x${res}"
+        magick logo.png -resize ${res}x${res} "icons-build/${res}x${res}/${pkgname}.png"
+    done
+    mkdir -p "icons-build/1024x1024"
+    cp logo.png "icons-build/1024x1024/${pkgname}.png"
+}
+
+package() {
+    cd "${_pkgname}-${pkgver}"
+
+	install -Dm644 dist/linux-unpacked/resources/app.asar -t "${pkgdir}/usr/lib/${pkgname}"
+
+    install -Dm755 "${srcdir}/${pkgname}.sh" "${pkgdir}/usr/bin/${pkgname}"
+    install -Dm644 "${srcdir}/${pkgname}.desktop" -t "${pkgdir}/usr/share/applications"
+
+    for res in 16 32 48 64 128 256 512 1024; do
+        install -Dm644 "icons-build/${res}x${res}/${pkgname}.png" \
+            "${pkgdir}/usr/share/icons/hicolor/${res}x${res}/apps/${pkgname}.png"
+    done
+
+    install -Dm644 "LICENSE.md" -t "${pkgdir}/usr/share/licenses/${pkgname}"
+}
