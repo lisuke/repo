@@ -10,7 +10,7 @@ pkgname=(
   "vlc-git"
   "vlc-plugin-lua-git"
 )
-pkgver=4.0.0.r37938.g04f65f5
+pkgver=4.0.0.r37942.g5d30bfa
 pkgrel=1
 pkgdesc="Multi-platform MPEG, VCD/DVD, and DivX player"
 url="https://github.com/videolan/vlc"
