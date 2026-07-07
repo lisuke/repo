@@ -2,7 +2,7 @@
 
 pkgname=clin-rs
 pkgver=0.9.6
-pkgrel=1
+pkgrel=2
 pkgdesc="Feature-packed TUI note management app inspired by Obsidian"
 arch=('x86_64' 'aarch64' 'riscv64')
 url="https://github.com/reekta92/${pkgname}"
