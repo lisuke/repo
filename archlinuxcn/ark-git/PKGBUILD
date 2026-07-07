@@ -2,7 +2,7 @@
 
 pkgname=ark-git
 _pkgname=${pkgname%-git}
-pkgver=24.01.90.r498.g616d878
+pkgver=24.01.90.r499.gd5029af
 pkgrel=1
 pkgdesc="Archiving Tool"
 arch=('x86_64')
