@@ -3,7 +3,7 @@
 
 pkgname=haruna-git
 _pkgname=${pkgname%-git}
-pkgver=1.8.1.r224.g8b495194
+pkgver=1.8.1.r226.g488d7888
 pkgrel=1
 pkgdesc="A Qt/QML video player built on top of libmpv"
 url="https://invent.kde.org/multimedia/${_pkgname}"
