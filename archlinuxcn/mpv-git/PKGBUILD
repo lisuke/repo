@@ -3,7 +3,7 @@
 
 pkgname=mpv-git
 _gitname=mpv
-pkgver=0.41.0.r864.g8e88661
+pkgver=0.41.0.r867.g4c220ff
 epoch=1
 pkgrel=1
 pkgdesc='A free, open source, and cross-platform media player (with all possible libs)'
