@@ -3,7 +3,7 @@
 pkgname=sabaki
 _pkgname=Sabaki
 pkgver=0.60.0
-_electronversion=42 # TODO: Update to 43 when electron43 is available in Arch Linux
+_electronversion=43
 pkgrel=2
 pkgdesc="An elegant Go board and SGF editor for a more civilized age"
 arch=('x86_64')
@@ -18,7 +18,7 @@ source=(
 )
 sha256sums=('47a7c726658e4896bf90e5fe5f38779b50b489292ca8be1e4a32fac9c628684d'
             '4aae9aff0199dcda177463b75f45c4c4a78b19fe6480958d2db5cdd7f89f8fee'
-            '4c967dfe4658e693e9c47f596f2793da5d86b3ef0ba383d9ee00a2cefa5b22ad')
+            '99ba97c85774d5f56bbf659004c43bd4a52f80d137296e236a38a48d4338fb9a')
 
 prepare() {
     cd "${_pkgname}-${pkgver}"
