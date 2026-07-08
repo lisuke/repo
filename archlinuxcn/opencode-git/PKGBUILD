@@ -4,7 +4,7 @@ _pkgname=opencode
 
 pkgname=${_pkgname}-git
 _githubname=anomalyco/opencode
-pkgver=1.17.15.r2.g14a5529
+pkgver=1.17.15.r4.g6cfe4bc
 pkgrel=1
 pkgdesc="The open source coding agent"
 url="https://github.com/${_githubname}"
