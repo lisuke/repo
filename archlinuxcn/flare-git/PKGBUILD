@@ -3,7 +3,7 @@
 
 pkgname=flare-git
 _pkgname=${pkgname%-git}
-pkgver=0.21.0.r0.g99d2398
+pkgver=0.21.0.r1.g484450e
 pkgrel=1
 pkgdesc="Chat with your friends on Signal"
 url="https://gitlab.com/schmiddi-on-mobile/${_pkgname}"
