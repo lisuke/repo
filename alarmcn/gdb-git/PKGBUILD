@@ -3,7 +3,7 @@
 # Contributor: Stefan Husmann <stefan-husmann@t-online.de>
 
 pkgname=('gdb-git' 'gdb-common-git')
-pkgver=126662.05c660d1d7c
+pkgver=126684.41e27802c2f
 pkgrel=1
 pkgdesc="The GNU Debugger from git"
 arch=(armv7h aarch64 i686 x86_64)
