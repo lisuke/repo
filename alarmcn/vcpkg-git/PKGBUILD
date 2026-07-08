@@ -3,7 +3,7 @@
 # Maintainer: Kuan-Yen Chou <kuanyenchou at gmail dot com>
 
 pkgname=vcpkg-git
-pkgver=2026.06.24.r133.g3a7f104b742
+pkgver=2026.06.24.r137.g91d69d33e10
 pkgrel=1
 pkgdesc='C++ library manager for Windows, Linux, and MacOS'
 depends=('curl' 'zip' 'unzip')
