@@ -4,9 +4,6 @@ pre_build_script: aur_pre_build(maintainers=['cotsuka'])
 post_build: aur_post_build
 update_on:
   - source: aur
-  - source: github
-    github: simonw/sqlite-migrate
-    use_latest_tag: true
   - alias: python
 repo_depends:
   - sqlite-utils
