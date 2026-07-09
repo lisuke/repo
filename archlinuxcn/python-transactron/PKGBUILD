@@ -3,7 +3,7 @@
 
 _pkgname=transactron
 pkgname="python-$_pkgname"
-pkgver=0.9.0
+pkgver=0.10.0
 pkgrel=1
 pkgdesc="Hardware transactions library for Amaranth"
 arch=(any)
@@ -14,7 +14,7 @@ depends=('python' 'python-amaranth' 'python-amaranth-stubs' 'python-dataclasses-
 makedepends=('git' 'python-build' 'python-installer' 'python-wheel'
              'python-setuptools-scm' 'python-packaging')
 source=("git+https://github.com/kuznia-rdzeni/transactron.git#tag=v${pkgver}")
-sha512sums=('66f4f0f61cef0e07c0ec2d90f5cec55683e45190e26bf2313cf9b7c60b0195002d386f59bef459218343a72917068902eaa30b1e4f0a9157a0dc0341978d26fb')
+sha512sums=('bef3f9ad0f2d4d60ec32af8b7dc9c68c3c1876fc674341202893362aa535680004e513967b40d519760579cd56cf7d346f383ebd69d38664e4430c5a6d7d0b4a')
 
 build() {
   cd "${_pkgname}"
