@@ -1,6 +1,6 @@
 # Maintainer: erk <v at erk dot io>
 pkgname=vnote-git
-pkgver=3021.d38bc5eb
+pkgver=3023.869198f1
 epoch=3
 pkgrel=1
 pkgdesc="A Vim-inspired note-taking application, especially for Markdown."
