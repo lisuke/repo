@@ -12,7 +12,7 @@
 # Contributor: Rustmilian <Rustmilian@proton.me>
 
 pkgname=depot-tools-git
-pkgver=r12328.845a05c35e
+pkgver=r12331.52a09ceb5c
 pkgrel=1
 pkgdesc='Tools for working with Chromium development'
 arch=(any)
