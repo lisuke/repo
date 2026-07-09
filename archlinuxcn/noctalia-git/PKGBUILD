@@ -2,7 +2,7 @@
 
 pkgname=noctalia-git
 _pkgname=noctalia
-pkgver=5.0.0.r4288.g14ec268fc
+pkgver=5.0.0.r4298.gdea1d264d
 pkgrel=2
 pkgdesc='Lightweight Wayland shell built directly on Wayland and OpenGL ES'
 arch=('x86_64')
@@ -41,6 +41,7 @@ makedepends=(
   'ninja'
   'nlohmann-json'
   'pkgconf'
+  'stb'
   'wayland-protocols'
 )
 provides=('noctalia')
@@ -60,10 +61,7 @@ build() {
   CXXFLAGS+=" -Wno-unused-result"
   arch-meson "${_pkgname}" build-release \
     -Db_ndebug=true \
-    -Dtests=disabled \
-    -Dsystem_md4c=true \
-    -Dsystem_tomlplusplus=true \
-    -Dsystem_nlohmann_json=true
+    -Dtests=disabled
   meson compile -C build-release
 }
 
