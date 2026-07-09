@@ -1,7 +1,7 @@
 # Maintainer: lilydjwg <lilydjwg@gmail.com>
 
 pkgname=ggml-vulkan-git
-pkgver=0.15.3.r1.g6af560d5
+pkgver=0.15.3.r74.g2faff767
 pkgrel=1
 pkgdesc="Tensor library for machine learning with OpenBLAS + Vulkan optimizations"
 url="https://github.com/ggml-org/ggml"
