@@ -3,7 +3,7 @@ maintainers:
     email: RocketDev <marocketbd@gmail.com>
 
 repo_depends:
-  - linux-cachyos
+  - linux-cachyos: linux-cachyos
 
 repo_makedepends:
   - linux-cachyos: linux-cachyos-headers
