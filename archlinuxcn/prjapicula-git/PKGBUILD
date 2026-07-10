@@ -3,7 +3,7 @@
 
 _pkgname="prjapicula"
 pkgname="$_pkgname-git"
-pkgver=0.32.r18.g4d5e1ea
+pkgver=0.32.r19.gdfb3c87
 pkgrel=1
 pkgdesc="Project Apicula bitstream documentation for Gowin FPGAs"
 url="https://github.com/YosysHQ/apicula"
