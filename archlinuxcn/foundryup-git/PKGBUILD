@@ -2,7 +2,7 @@
 
 _name=foundry
 pkgname=foundryup-git
-pkgver=r7622.b6e5795
+pkgver=r7628.e65791a
 pkgrel=1
 pkgdesc="Update or revert to a specific Foundry branch with ease"
 license=('MIT OR Apache-2.0')
