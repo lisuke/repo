@@ -2,7 +2,7 @@ maintainers:
   - github: RocketMaDev
     email: marocketbd@gmail.com
 
-build_prefix: multilib
+build_prefix: multilib-archlinuxcn
 
 repo_depends:
   - lib32-gstreamer: lib32-gst-plugins-base-libs
