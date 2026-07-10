@@ -2,7 +2,7 @@
 _pkgname=cemu
 pkgname=$_pkgname-git
 epoch=1
-pkgver=2.6.r266.gaa7c82d
+pkgver=2.6.r267.g2b9938d
 pkgrel=1
 pkgdesc="Nintendo Wii U emulator"
 arch=('x86_64')
