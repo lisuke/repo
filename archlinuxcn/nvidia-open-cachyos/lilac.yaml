@@ -13,4 +13,5 @@ post_build_script: git_pkgbuild_commit()
 
 update_on:
   - alias: nvidia-open-dkms
-  - alias: linux-cachyos
+  - source: alpm-lilac
+    alpm: linux-cachyos
