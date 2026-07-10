@@ -15,5 +15,9 @@ update_on:
   - source: github
     github: hyprwm/hyprgraphics
 
+  - source: alpm
+    alpm: libjxl
+    provided: libjxl.so
+
 update_on_build:
   - pkgbase: hyprutils-git
