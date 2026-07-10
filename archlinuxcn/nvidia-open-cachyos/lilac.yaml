@@ -4,6 +4,7 @@ maintainers:
 
 repo_depends:
   - linux-cachyos: linux-cachyos
+  - linux-cachyos: linux-cachyos-headers
 
 repo_makedepends:
   - linux-cachyos: linux-cachyos-headers
