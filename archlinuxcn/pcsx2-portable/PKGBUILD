@@ -1,7 +1,7 @@
 # Maintainer: Kimiblock Moe
 
 pkgname=pcsx2-portable
-pkgver=2.7.458.r0.g7e49bc5a50
+pkgver=2.7.460.r0.gac83e93426
 pkgrel=1
 epoch=1
 pkgdesc="PCSX2 devel sandboxed by portable. Always uses discrete GPU & Wayland when available."
