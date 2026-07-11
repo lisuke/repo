@@ -17,6 +17,9 @@ conflicts=('nvidia' 'linux-cachyos-nvidia-open')
 replaces=('nvidia<=580.119.02-2')
 provides=('NVIDIA-MODULE')
 
+source=('lilac.yaml')
+sha256sums=('SKIP')
+
 build() {
     _kernver=$(</usr/src/linux-cachyos/version)
 
