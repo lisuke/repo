@@ -2,7 +2,7 @@
 # Maintainer: Merrkry <merrkry@tsubasa.moe>
 _pkgname="tsukimi"
 pkgname="${_pkgname}-git"
-pkgver=26.7.2.r1560.g0c5523
+pkgver=26.7.2.r1562.g68b9d3
 pkgrel=1
 pkgdesc='A simple third-party Emby client'
 arch=('x86_64')
