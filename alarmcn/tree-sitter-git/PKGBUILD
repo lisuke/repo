@@ -4,7 +4,7 @@
 
 pkgname=tree-sitter-git
 _pkgname=${pkgname%-git}
-pkgver=0.26.3.r313.gcc7be1f
+pkgver=0.26.3.r319.g08fcb7f
 pkgrel=1
 epoch=1
 pkgdesc="An incremental parsing system for programming tools"
