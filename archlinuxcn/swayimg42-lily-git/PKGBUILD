@@ -14,6 +14,7 @@ makedepends=(
     'meson'
     'ninja'
     'wayland-protocols'
+    'git'
 )
 depends=(
     'cairo'
