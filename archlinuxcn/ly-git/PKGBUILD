@@ -1,7 +1,7 @@
 # Maintainer: steffeno <steffeno dash etc at protonmail dot com>
 _pkgname=ly
 pkgname="$_pkgname"-git
-pkgver=1.4.0.r67.gd00780d
+pkgver=1.4.0.r69.g7c2ae27
 pkgrel=1
 pkgdesc="TUI display manager"
 arch=(i686 x86_64 aarch64)

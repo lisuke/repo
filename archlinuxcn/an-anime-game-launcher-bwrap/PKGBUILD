@@ -2,7 +2,7 @@
 # Contributor: HurricanePootis <hurricanepootis@protonmail.com>
 pkgname=an-anime-game-launcher-bwrap
 pkgver=3.19.7
-pkgrel=2
+pkgrel=3
 pkgdesc="A Launcher for a specific anime game with auto-patching, discord rpc and time tracking"
 arch=('x86_64')
 provides=('an-anime-game-launcher' 'an-anime-game-launcher-portable')
@@ -19,7 +19,7 @@ source=("git+$url.git"
 	"config.toml"
 	"desktop.file")
 sha256sums=('SKIP'
-            '1e20548758b998d145d603bc1bdd46a3dd5638d21866a7b5f3e95792e1c0594c'
+            '9efeb3496896a06c2d524d4636548972a495f8da55d3495b8bcc07f120147ab2'
             'bd7626b79160696218abc22c4633b0c13f3c8647b183ceb7b30f75a22b969beb')
 
 prepare() {

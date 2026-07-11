@@ -6,7 +6,7 @@
 
 pkgname=ffmpeg-lily
 pkgver=8.1.2
-pkgrel=7
+pkgrel=10
 epoch=2
 pkgdesc='Complete solution to record, convert and stream audio and video (with AMD HEVC VAAPI alignment patch)'
 arch=(x86_64)
@@ -227,7 +227,7 @@ package() {
     libdav1d.so
     libfreetype.so
     libharfbuzz.so
-    libjxl.so
+#   libjxl.so
     libopenmpt.so
     libplacebo.so
     librav1e.so

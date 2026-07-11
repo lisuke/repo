@@ -1,0 +1,79 @@
+# Maintainer: lilydjwg <lilydjwg@gmail.com>
+# Contributor: Brett Cornwall <ainola@archlinux.org>
+# Contributor: Robin Candau <antiz@archlinux.org>
+# Contributor: Artem Senichev <artemsen@gmail.com>
+
+pkgname=swayimg42-lily-git
+pkgver=4.2.r2.g366ea79
+pkgrel=1
+pkgdesc='A lightweight image viewer for Wayland display servers (version 4.2 before Lua)'
+arch=('x86_64')
+license=('MIT')
+makedepends=(
+    'bash-completion'  # Meson requirement
+    'meson'
+    'ninja'
+    'wayland-protocols'
+    'git'
+)
+depends=(
+    'cairo'
+    'hicolor-icon-theme'
+    'libavif'
+    'libexif.so'
+    'libfontconfig.so'
+    'libfreetype.so'
+    'libgif.so'
+    'libgobject-2.0.so'
+    'libheif'
+    'libjpeg.so'
+    'libjson-c.so'
+    'libjxl.so'
+    'libpng'
+    'libraw'
+    'librsvg-2.so'
+    'libsixel'
+    'libtiff.so'
+    'libwayland-client.so'
+    'libwebp.so'
+    'libwebpdemux.so'
+    'libxkbcommon'
+    'openexr'
+)
+url='https://github.com/lilydjwg/swayimg'
+source=("swayimg::git+$url.git")
+sha256sums=('SKIP')
+provides=(swayimg=4.2)
+conflicts=(swayimg)
+
+pkgver() {
+    cd swayimg
+    git describe --tags | sed -E 's/([^-]*-g)/r\1/;s/-/./g;s/^v//'
+}
+build() {
+    arch-meson build swayimg \
+        -D bash=enabled \
+        -D desktop=true \
+        -D exif=enabled \
+        -D gif=enabled \
+        -D heif=enabled \
+        -D jpeg=enabled \
+        -D jxl=enabled \
+        -D man=true \
+        -D png=enabled \
+        -D sixel=enabled \
+        -D svg=enabled \
+        -D tiff=enabled \
+        -D version="$pkgver" \
+        -D webp=enabled \
+        -D zsh=enabled
+    ninja -C build
+}
+
+package(){
+    DESTDIR="$pkgdir" ninja -C build install
+
+    cd swayimg
+    install -Dm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
+    install -Dm644 README.md -t "$pkgdir/usr/share/doc/$pkgname/"
+}
