@@ -30,9 +30,8 @@ package() {
 		--distro arch \
 		--mode copy prismlauncher \
 		--hash true \
-		--config "${srcdir}/portable-config" \
+		--config-ng "${srcdir}/config.toml" \
 		--desktop-file "${srcdir}/desktop.file"
 
-	install -vDm755 "/usr/bin/prismlauncher" -t "${pkgdir}/usr/lib/portable/overlay-usr"
 	ln -srf "${pkgdir}/usr/bin/prismlauncher-portable" "${pkgdir}/usr/bin/prismlauncher"
 }
