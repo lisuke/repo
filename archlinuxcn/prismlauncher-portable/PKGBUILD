@@ -15,7 +15,7 @@ glibc  gcc-libs  java-runtime  libgl  qt6-base  qt6-5compat  qt6-svg  qt6-imagef
 makedepends=(desktop-file-utils prismlauncher)
 optdepends=('visualvm: Profiling support')
 source=(
-	portable-config
+	config.toml
 	desktop.file
 )
 b2sums=('9207b8b3001285fae586f40e0284873173de8ee52e3a4407e67197ed3fac064de44b0ea90c252f7dfe834a85aa7149d270f9906ee2d2618a814b1803108b804c'
