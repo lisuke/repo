@@ -5,7 +5,7 @@
 
 pkgname=kate-git
 _pkgname=${pkgname%-git}
-pkgver=26.11.70_r23920.g17ec2d7771
+pkgver=26.11.70_r23921.gf666c4cce1
 pkgrel=1
 pkgdesc="Advanced Text Editor"
 groups=('kde-applications-git' 'kde-utilities-git')
