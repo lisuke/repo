@@ -5,7 +5,7 @@
 # Contributor: Themaister <maister@archlinux.us>
 
 pkgname=pcsx2-git
-pkgver=2.7.464.r0.g5e3ad282a8
+pkgver=2.7.469.r0.g92914cee40
 pkgrel=1
 pkgdesc='PlayStation 2 emulator'
 arch=(x86_64)
