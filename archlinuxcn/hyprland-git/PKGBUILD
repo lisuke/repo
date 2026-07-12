@@ -5,7 +5,7 @@
 
 pkgname=hyprland-git
 _pkgname=${pkgname%-git}
-pkgver=0.55.0.r275.824ed12c9
+pkgver=0.55.0.r280.f4b9c1ab2
 pkgrel=1
 pkgdesc="A dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks."
 arch=(x86_64 aarch64)
