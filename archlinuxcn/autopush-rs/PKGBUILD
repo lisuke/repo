@@ -11,7 +11,7 @@ conflicts=('autopush' 'autopush-rs' 'sunup-server')
 url="https://github.com/mozilla-services/autopush-rs"
 license=('MPL-2.0')
 depends=('libgcc' 'glibc' 'openssl' 'grpc' 'zstd' 'python' 'python-cryptography')
-makedepends=('cargo' 'git' 'clang')
+makedepends=('rust' 'git' 'clang')
 optdepends+=(redis google-cloud-cli postgresql)
 options=(!lto)
 source=("git+$url.git#tag=${pkgver}")
