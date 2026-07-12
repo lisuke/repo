@@ -5,7 +5,7 @@
 # Contributor: Frederik “Freso” S. Olesen <freso.dk@gmail.com>
 # Contributor: Maxime Gauduin <alucryd@archlinux.org>
 pkgname=lutris-git
-pkgver=0.5.22.r383.g3b03c7b
+pkgver=0.5.22.r385.g0747076
 pkgrel=1
 pkgdesc="Open Gaming Platform"
 arch=('any')
