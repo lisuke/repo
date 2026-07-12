@@ -10,7 +10,7 @@ conflicts=('autopush' 'autopush-rs' 'sunup-server')
 url="https://github.com/p1gp1g/autopush-rs"
 license=('MPL-2.0')
 depends=('gcc-libs' 'openssl' 'pypy' 'libffi' 'grpc')
-makedepends=('rustup' 'git' 'cmake3' 'python-virtualenv' 'clang')
+makedepends=('rust' 'git' 'cmake3' 'python-virtualenv' 'clang')
 options=(!lto)
 source=("git+$url.git")
 sha256sums=('SKIP')
@@ -21,7 +21,6 @@ pkgver() {
 }
 
 prepare() {
-	rustup default stable
 	cd "$srcdir/autopush-rs"
 	git checkout "feat/redis"
 	cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
