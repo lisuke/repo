@@ -2,8 +2,8 @@
 
 _pkgname="ruffle"
 pkgname="ruffle-git"
-pkgver=r17026.e13f89e
-pkgrel=2
+pkgver=r17027.f47766f
+pkgrel=1
 pkgdesc="A Flash Player emulator written in Rust."
 url="https://github.com/ruffle-rs/ruffle"
 license=("MIT" "Apache-2.0")
