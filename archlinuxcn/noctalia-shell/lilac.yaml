@@ -9,4 +9,6 @@ repo_depends:
   - noctalia-qs
 
 update_on:
+  - source: aur
+    aur: noctalia-shell
   - alias: qt6-base
