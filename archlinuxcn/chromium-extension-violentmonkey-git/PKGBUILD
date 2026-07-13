@@ -3,7 +3,7 @@
 
 pkgsubn=violentmonkey
 pkgname=chromium-extension-violentmonkey-git
-pkgver=3730.2619a5f7
+pkgver=3731.c14f94e2
 pkgrel=1
 pkgdesc="Chrome/Chromium extension for Violentmonkey - git/dev"
 arch=('any')
