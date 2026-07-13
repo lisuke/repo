@@ -2,7 +2,7 @@
 
 _pkgname=box64
 pkgname=${_pkgname}-git
-pkgver=0.4.3.3.r132.ga5a320ae
+pkgver=0.4.3.3.r139.geb3cd0c1
 pkgrel=1
 pkgdesc='Linux Userspace x86_64 Emulator with a twist'
 arch=('x86_64' 'aarch64' 'riscv64')
