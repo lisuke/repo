@@ -1,5 +1,5 @@
 pkgname=grimblast-git
-pkgver=r89.fe26a90
+pkgver=r167.3dcbce7
 pkgrel=1
 pkgdesc="A helper for screenshots within Hyprland."
 arch=("any")
