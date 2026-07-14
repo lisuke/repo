@@ -3,7 +3,7 @@
 _pkgname=owncloud-client-desktop-shell-integration-dolphin
 pkgname=${_pkgname}-git
 pkgver=r26.6f3b21b
-pkgrel=1
+pkgrel=2
 pkgdesc='ownCloud Dolphin integration'
 url="https://github.com/owncloud/client-desktop-shell-integration-dolphin"
 license=('GPL-2.0')
