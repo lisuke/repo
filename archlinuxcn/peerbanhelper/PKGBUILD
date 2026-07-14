@@ -3,7 +3,7 @@
 
 pkgname=peerbanhelper
 pkgver=9.4.1
-pkgrel=1
+pkgrel=2
 pkgdesc="A tool to auto ban peers on the Bittorrent network"
 arch=('any')
 url="https://github.com/PBH-BTN/PeerBanHelper"
