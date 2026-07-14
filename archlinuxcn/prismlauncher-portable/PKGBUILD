@@ -2,7 +2,7 @@
 
 pkgname=prismlauncher-portable
 pkgver=11.0.2
-pkgrel=2
+pkgrel=3
 provides=(prismlauncher prismlauncher-portable prismlauncher-bwrap)
 replaces=(prismlauncher-bwrap)
 conflicts=(prismlauncher)
