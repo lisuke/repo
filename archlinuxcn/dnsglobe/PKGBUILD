@@ -2,7 +2,7 @@
 
 pkgname=dnsglobe
 pkgver=0.4.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Global DNS propagation checker TUI"
 arch=('x86_64' 'aarch64')
 url="https://github.com/514-labs/dnsglobe"
