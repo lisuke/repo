@@ -1,6 +1,6 @@
 pkgname=grimblast-git
 pkgver=r167.3dcbce7
-pkgrel=1
+pkgrel=2
 pkgdesc="A helper for screenshots within Hyprland."
 arch=("any")
 url="https://github.com/hyprwm/contrib"
