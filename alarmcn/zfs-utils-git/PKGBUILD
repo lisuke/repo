@@ -10,7 +10,7 @@
 #
 
 pkgname=zfs-utils-git
-pkgver=2.4.99.r835.gffde77051c
+pkgver=2.4.99.r837.g9a02e53ad8
 pkgrel=1
 epoch=2
 pkgdesc='Userspace utilities for the Zettabyte File System.'
