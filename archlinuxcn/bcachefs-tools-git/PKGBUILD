@@ -2,7 +2,7 @@
 
 pkgname=bcachefs-tools-git
 _pkgname=${pkgname%-git}
-pkgver=1.38.8.r86.g7f2519c
+pkgver=1.38.8.r119.g6a757ae
 pkgrel=1
 epoch=1
 pkgdesc="BCacheFS filesystem utilities"
