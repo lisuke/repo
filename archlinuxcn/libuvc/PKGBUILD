@@ -4,7 +4,7 @@
 
 pkgname=libuvc
 pkgver=0.0.7
-pkgrel=4
+pkgrel=5
 pkgdesc="a cross-platform library for USB video devices"
 arch=('i686' 'x86_64' 'aarch64')
 url='https://libuvc.github.io/libuvc/'
