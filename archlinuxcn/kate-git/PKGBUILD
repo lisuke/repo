@@ -6,7 +6,7 @@
 pkgname=kate-git
 _pkgname=${pkgname%-git}
 pkgver=26.11.70_r23923.g8114952f57
-pkgrel=1
+pkgrel=2
 pkgdesc="Advanced Text Editor"
 groups=('kde-applications-git' 'kde-utilities-git')
 url="https://www.kde.org/applications/utilities/${_pkgname}/"
