@@ -6,7 +6,7 @@
 # will be on config.extra file.
 
 pkgbase=linux-git
-pkgver=7.2rc3.r14.0f26556c5eee
+pkgver=7.2rc3.r38.3b029c035b34
 pkgrel=1
 epoch=1
 pkgdesc="Linus Torvalds' Mainline Linux"
