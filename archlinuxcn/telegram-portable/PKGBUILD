@@ -21,7 +21,6 @@ depends=("portable"
   'hunspell'
   'kcoreaddons'
   'libavif'
-  'libdispatch'
   'libgcc'
   'libheif'
   'libjxl'
@@ -36,13 +35,19 @@ depends=("portable"
   'openal'
   'openh264' 'libopenh264.so'
   'openssl' 'libcrypto.so' 'libssl.so'
-  'pipewire'
   'protobuf' 'libprotobuf-lite.so'
   'qt6-base'
   'qt6-imageformats'
   'qt6-svg'
   'rnnoise'
   'xxhash'
+  libjpeg-turbo
+  bash
+  libxkbcommon
+  libxfixes
+  opus
+  libxext
+  libpipewire
   'zlib')
 conflicts=("telegram-desktop")
 
