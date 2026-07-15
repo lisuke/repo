@@ -1,7 +1,7 @@
 # Maintainer: Kimiblock Moe
 
 pkgname=localsend-portable
-pkgver=1
+pkgver=1.17.0
 pkgrel=1
 provides=(localsend)
 conflicts=(localsend)
@@ -15,8 +15,8 @@ source=(
 	config.toml
 	desktop.file
 )
-b2sums=('9207b8b3001285fae586f40e0284873173de8ee52e3a4407e67197ed3fac064de44b0ea90c252f7dfe834a85aa7149d270f9906ee2d2618a814b1803108b804c'
-        '8370d9a7b7f60ec115cad0c2c4d86cdaebbd2f1e5cd5c4d5b8525310aac8751397d59a09440058db67e9a6f1adbd5b227333f6cd03c7eb4cab66dad2c9035f2c')
+b2sums=('88c6cfd2ac178196515c79bfb37ecde8a60ba1b44631af0ba077d9d673d1e7193e5d3eb0f48b54ec1c9d7c0ed203708f7090019c71029c0b63ec8d7259698655'
+        '1ee8212c4ebaffe9b5803c7367e271879918665545a702a5dfe7c9d6f7f8a8b9be71998f40af059f663030d117682be50acfa02a42258c4fc78ace9e777452e0')
 
 package() {
 	export pkgdir
