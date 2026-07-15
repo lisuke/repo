@@ -31,6 +31,9 @@ update_on:
   - source: alpm
     alpm: openh264
     provided: libopenh264.so
+  - source: alpm
+    alpm: libjxl
+    provided: libjxl.so
   - source: alpmfiles
     pkgname: ada
     filename: 'usr/lib/libada\.so\.(\d+)'
