@@ -10,7 +10,7 @@ export CARGO_HOME CARGO_TARGET_DIR RUSTUP_TOOLCHAIN
 _pkgname="wezterm"
 pkgname="$_pkgname-git"
 pkgdesc="A GPU-accelerated cross-platform terminal emulator and multiplexer"
-pkgver=20260714.112341.d13ed704
+pkgver=20260714.220616.d96ba571
 pkgrel=1
 url="https://github.com/wezterm/wezterm"
 license=("MIT")
