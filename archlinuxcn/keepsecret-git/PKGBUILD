@@ -2,8 +2,8 @@
 
 _pkgname=keepsecret
 pkgname=keepsecret-git
-pkgver=1.0.0.r185.g6ccb255
-pkgrel=2
+pkgver=1.0.0.r188.g97ffe4e
+pkgrel=1
 pkgdesc='Password manager'
 arch=(x86_64)
 url='https://apps.kde.org/keepsecret/'
