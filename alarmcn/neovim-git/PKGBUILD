@@ -4,7 +4,7 @@
 
 pkgname=neovim-git
 _pkgname=${pkgname%-git}
-pkgver=0.12.0.r1324.g31ad7d4527
+pkgver=0.12.0.r1327.g1741da8412
 pkgrel=1
 pkgdesc="Fork of Vim aiming to improve user experience, plugins, and GUIs."
 arch=('i686' 'x86_64' 'armv7h' 'armv6h' 'aarch64')
