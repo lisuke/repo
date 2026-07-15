@@ -1,0 +1,20 @@
+maintainers:
+  - github: RocketMaDev
+    email: RocketDev <marocketbd@gmail.com>
+
+repo_depends:
+  - linux-cachyos: linux-cachyos
+  - linux-cachyos: linux-cachyos-headers
+
+repo_makedepends:
+  - linux-cachyos: linux-cachyos-headers
+
+pre_build_script: update_pkgver_and_pkgrel(_G.newver)
+post_build_script: git_pkgbuild_commit()
+
+update_on:
+  - source: alpm
+    alpm: nvidia-open-dkms
+    strip_release: true
+  - source: alpm-lilac
+    alpm: linux-cachyos

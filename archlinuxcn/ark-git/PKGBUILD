@@ -2,8 +2,8 @@
 
 pkgname=ark-git
 _pkgname=${pkgname%-git}
-pkgver=24.01.90.r501.g479df62
-pkgrel=1
+pkgver=24.01.90.r503.gbaabdb1
+pkgrel=2
 pkgdesc="Archiving Tool"
 arch=('x86_64')
 url="https://apps.kde.org/ark/"

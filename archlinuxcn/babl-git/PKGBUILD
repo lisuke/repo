@@ -5,8 +5,8 @@
 
 pkgname=babl-git
 _pkgname=babl
-pkgver=0.1.124.70.g43d823d3a
-pkgrel=1
+pkgver=0.1.124.71.g2f6ccc8fd
+pkgrel=2
 pkgdesc="babl is a dynamic, any to any, pixel format translation library."
 arch=('i686' 'x86_64')
 url="https://www.gegl.org/babl"

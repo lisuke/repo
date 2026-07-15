@@ -3,7 +3,7 @@
 
 pkgname=psst-git
 pkgver=r642.e84ebf6
-pkgrel=1
+pkgrel=2
 pkgdesc="Fast and multi-platform Spotify client with native GUI"
 arch=("x86_64")
 options=(!lto)

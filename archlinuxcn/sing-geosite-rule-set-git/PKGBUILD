@@ -1,7 +1,7 @@
 # Maintainer: everyx <lunt.luo#gmail.com>
 
 pkgname=sing-geosite-rule-set-git
-pkgver=20260710151336
+pkgver=20260714071254
 provides=("sing-geosite-rule-set=${pkgver}")
 pkgrel=1
 pkgdesc="Geosite Rule Sets for sing-box"

@@ -1,7 +1,7 @@
 # Maintainer: Qi Meng <qi_meng0206@outlook.com>
 pkgname=7zip-zstd
 pkgver=26.02
-pkgrel=2
+pkgrel=3
 _pkgver=1.5.7-R2
 _srcname="7-Zip-zstd-${pkgver}-v${_pkgver}"
 pkgdesc="File archiver for extremely high compression (With Zstandard support)"

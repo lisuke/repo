@@ -2,9 +2,9 @@
 
 _pkgname=dwproton
 pkgname=${_pkgname}-bin
-_srcver=11.0-5
+_srcver=11.0-7
 pkgver=${_srcver//-/_}
-pkgrel=6
+pkgrel=2
 epoch=1
 pkgdesc="Proton builds with the latest Dawn Winery fixes for gacha games, based on Proton-CachyOS."
 arch=('x86_64')
@@ -14,7 +14,7 @@ options=(!strip emptydirs)
 provides=('proton' 'dwproton')
 _srcdir="${_pkgname}-${_srcver}-${CARCH}"
 source=("${url}/releases/download/${_pkgname}-${_srcver}/${_srcdir}.tar.xz")
-sha512sums=('63c5d03cb09ecce4d2386e833066fbb9f289d4701302ff5bfeb5103315578e4fd9d3c0157c1683f8726b552345554f50d35de30a822468fea8622cf6c695da34')
+sha512sums=('b6af1d00140376bd91164baedd1b0e87b52565c8fa879d97a2461a9ecf5546e1bb4d847122efba2a463024ff2904ea62f5f91a2a8325eabee2f6c76a0003ed86')
 depends=(
   bash
   coreutils

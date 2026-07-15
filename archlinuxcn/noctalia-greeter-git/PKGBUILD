@@ -2,8 +2,8 @@
 
 pkgname=noctalia-greeter-git
 _pkgname=noctalia-greeter
-pkgver=1.0.0.r142.g1d3cd3fa9
-pkgrel=2
+pkgver=1.0.0.r155.gb07359813
+pkgrel=4
 pkgdesc="Greetd greeter for Noctalia"
 arch=('x86_64')
 url="https://github.com/noctalia-dev/noctalia-greeter"
