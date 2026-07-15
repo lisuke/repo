@@ -1,0 +1,34 @@
+# Maintainer: Kimiblock Moe
+
+pkgname=localsend-portable
+pkgver=1
+pkgrel=1
+provides=(localsend)
+conflicts=(localsend)
+pkgdesc="AirDrop alternative. Sandboxed by portable."
+arch=(x86_64)
+url='https://localsend.org'
+license=('Apache-2.0')
+depends=(portable)
+makedepends=(localsend)
+source=(
+	config.toml
+	desktop.file
+)
+b2sums=('9207b8b3001285fae586f40e0284873173de8ee52e3a4407e67197ed3fac064de44b0ea90c252f7dfe834a85aa7149d270f9906ee2d2618a814b1803108b804c'
+        '8370d9a7b7f60ec115cad0c2c4d86cdaebbd2f1e5cd5c4d5b8525310aac8751397d59a09440058db67e9a6f1adbd5b227333f6cd03c7eb4cab66dad2c9035f2c')
+
+package() {
+	export pkgdir
+	export pkgname
+	export srcdir
+	portable-packer \
+		-v \
+		--distro arch \
+		--mode copy localsend \
+		--hash true \
+		--config-ng "${srcdir}/config.toml" \
+		--desktop-file "${srcdir}/desktop.file"
+
+	ln -srf "${pkgdir}/usr/bin/localsend-portable" "${pkgdir}/usr/bin/localsend"
+}
