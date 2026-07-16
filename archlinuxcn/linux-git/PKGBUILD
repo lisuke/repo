@@ -6,8 +6,8 @@
 # will be on config.extra file.
 
 pkgbase=linux-git
-pkgver=7.2rc3.r48.7059bdf4f04a
-pkgrel=2
+pkgver=7.2rc3.r94.37e2f878a7a6
+pkgrel=1
 epoch=1
 pkgdesc="Linus Torvalds' Mainline Linux"
 url="https://www.kernel.org"
