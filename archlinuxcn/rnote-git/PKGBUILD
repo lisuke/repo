@@ -3,7 +3,7 @@
 
 pkgname=rnote-git
 _pkgname=${pkgname%-git}
-pkgver=0.14.2.r11.g6b33a627a
+pkgver=0.14.2.r14.gd396dd06a
 pkgrel=1
 pkgdesc="A simple drawing application to create handwritten notes"
 arch=('x86_64')
