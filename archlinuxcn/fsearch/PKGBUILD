@@ -23,5 +23,4 @@ check() {
 
 package() {
 	DESTDIR="${pkgdir}" meson install -C build
-	install -Dm644 "${pkgname}-${pkgver}/License" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 }
