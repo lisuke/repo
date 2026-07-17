@@ -1,0 +1,5 @@
+[blockbench]
+source = "git"
+git = "https://github.com/JannisX11/blockbench.git"
+prefix = "v"
+include_regex = "v\\d+\\.\\d+\\.\\d+"
