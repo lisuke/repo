@@ -13,4 +13,12 @@ update_on:
     gitea: "continuwuation/continuwuity"
     host: "forgejo.ellis.link"
     lilac_throttle: 1d
+  - source: alpm
+    alpm: zstd
+    provided: libzstd.so
+    strip_release: true
+  - source: alpm
+    alpm: jemalloc
+    provided: libjemalloc.so
+    strip_release: true
 build_prefix: extra-x86_64

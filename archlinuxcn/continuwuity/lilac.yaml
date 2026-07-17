@@ -16,4 +16,12 @@ update_on:
     prefix: "v"
     from_pattern: '-'
     to_pattern: '_'
+  - source: alpm
+    alpm: zstd
+    provided: libzstd.so
+    strip_release: true
+  - source: alpm
+    alpm: jemalloc
+    provided: libjemalloc.so
+    strip_release: true
 build_prefix: extra-x86_64
