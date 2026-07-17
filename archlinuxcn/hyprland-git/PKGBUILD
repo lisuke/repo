@@ -30,6 +30,7 @@ depends=(cairo
 	pango
 	pixman
 	polkit
+	sdbus-cpp
 	seatd
 	systemd-libs
 	vulkan-icd-loader
