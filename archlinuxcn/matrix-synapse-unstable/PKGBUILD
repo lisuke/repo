@@ -3,7 +3,7 @@
 # Contributor: Ivan Shapovalov <intelfx@intelfx.name>
 
 pkgname=matrix-synapse-unstable
-pkgver=1.156.0
+pkgver=1.157.0rc1
 pkgrel=1
 pkgdesc="Matrix reference homeserver"
 url="https://github.com/element-hq/synapse"
@@ -44,7 +44,7 @@ source=("$pkgname::git+https://github.com/element-hq/synapse.git#tag=v$pkgver"
         'sysusers-synapse.conf'
         'tmpfiles-synapse.conf'
         'override-hardened.conf')
-sha256sums=('7aae28626a3e5620eaaff5054c1fa8548a4ff6c8fb13c83fef50bed8f3e7fd6a'
+sha256sums=('55796710b1c70449e9f2fd7a8d86c72fc2ec9fa4898260738716afcf9040aa3e'
             '751d0cb122b3c17cb4a2142461ac99bbaec798f1e4b357dd41ec4041e5623d35'
             'f67334856609997eac26939d77cfc520e78e98d3755543ab730d83a0f362a35e'
             '74af0bc2f57e5ced1a44f2438922d420cbb7defedae784cac02ef125f276a2ed'

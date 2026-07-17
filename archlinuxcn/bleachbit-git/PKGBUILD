@@ -2,8 +2,8 @@
 
 pkgname=bleachbit-git
 _pkgname=${pkgname%-git}
-pkgver=6.0.2.r151.gea3473f
-pkgrel=2
+pkgver=6.0.2.r193.g5994909
+pkgrel=1
 pkgdesc='Deletes unneeded files to free disk space and maintain privacy'
 arch=('any')
 url='https://www.bleachbit.org/'
