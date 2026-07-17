@@ -14,7 +14,7 @@ post_build_script: git_pkgbuild_commit()
 
 update_on:
   - source: alpm
-    alpm: nvidia-open-dkms
+    alpm: nvidia-utils
     strip_release: true
   - source: alpm-lilac
     alpm: linux-cachyos
