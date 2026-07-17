@@ -10,7 +10,7 @@
 #        'git+https://github.com/KhronosGroup/SPIRV-Cross.git#commit=5c24d99')
 
 pkgname=retroarch-git
-pkgver=1.22.2.r2864.b5bdb0387a
+pkgver=1.22.2.r2866.7896b3a008
 pkgrel=1
 epoch=2
 _gitname=RetroArch
