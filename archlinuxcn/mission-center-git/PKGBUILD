@@ -2,7 +2,7 @@
 
 pkgname=mission-center-git
 _pkgname=${pkgname%-git}
-pkgver=1.1.0.r148.g50e7c67
+pkgver=1.1.0.r149.gc41c254
 pkgrel=1
 pkgdesc="Monitor your CPU, Memory, Disk, Network and GPU usage"
 arch=('x86_64' 'aarch64')
