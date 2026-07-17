@@ -50,6 +50,7 @@ depends=(
   pixman
   polkit
   re2
+  sdbus-cpp
   seatd
   systemd-libs
   tomlplusplus
