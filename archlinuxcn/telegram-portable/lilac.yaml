@@ -7,7 +7,7 @@ post_build_script: |
 
 update_on:
   - source: alpm
-    alpm: telegram-portable
+    alpm: telegram-desktop-lily
     repo: archlinuxcn
     strip_release: true
     prefix: "1:"
