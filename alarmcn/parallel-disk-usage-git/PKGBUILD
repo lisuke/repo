@@ -3,7 +3,7 @@
 
 pkgname=parallel-disk-usage-git
 _pkgname=${pkgname%-git}
-pkgver=0.24.0.r8.g15cf626
+pkgver=0.24.0.r9.g6e6397a
 pkgrel=1
 pkgdesc="Summarize disk usage of the set of files, recursively for directories."
 arch=('x86_64' 'aarch64' 'riscv64')
