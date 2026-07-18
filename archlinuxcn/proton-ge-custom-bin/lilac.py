@@ -45,6 +45,7 @@ def pre_build():
     newver = _G.newver.lstrip("GE-Proton").replace('-', '.')
     update_pkgver_and_pkgrel(newver)
     _update_changelog(newver)
+    git_add_files("changelog.md")
 
 def post_build():
     git_pkgbuild_commit()

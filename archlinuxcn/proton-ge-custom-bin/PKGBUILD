@@ -28,24 +28,6 @@ depends=(
   'python'
 )
 optdepends=(
-  'openal'		'lib32-openal'
-  'vkd3d'		'lib32-vkd3d'
-  # libav support #
-  'libva'		'lib32-libva'
-  'speex'		'lib32-speex'
-  'libtheora'		'lib32-libtheora'
-  'libvdpau'		'lib32-libvdpau'
-  # gstreamer support #
-  'gst-plugins-bad-libs'  'lib32-gst-plugins-base-libs'
-  'libjpeg-turbo'       'lib32-libjpeg-turbo'
-  'graphene'
-  'libgudev'		'lib32-libgudev'
-  'mpg123'		'lib32-mpg123'
-  'libsoup'
-  # other libs #
-  'openssl'		'lib32-openssl'
-  'libusb'		'lib32-libusb'
-  # other #
   'kdialog: KDE splash dialog support'
   'zenity: GNOME splash dialog support'
   'python-kivy: splash dialog support (big picture mode)'
