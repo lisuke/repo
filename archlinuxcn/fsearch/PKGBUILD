@@ -1,7 +1,7 @@
 # Maintainer: Christian Boxdörfer <christian.boxdoerfer@posteo.de>
 
 pkgname=fsearch
-pkgver=0.3
+pkgver=0.3.1
 pkgrel=1
 pkgdesc="A fast graphical file search utility."
 arch=('i686' 'x86_64')
@@ -10,7 +10,7 @@ license=('GPL-2.0-or-later')
 depends=('gtk3' 'icu' 'pcre2')
 makedepends=('git' 'glib2-devel' 'itstool' 'meson')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/cboxdoerfer/${pkgname}/archive/${pkgver}.tar.gz")
-sha256sums=('17e9bb26f0c6077192dc1f40800c5c2e6074d93ef0e7f95b42180eb6b143b556')
+sha256sums=('b16ab75556d841bf858633710d71c92f35d34362614b8584b0a5b71690a72c39')
 
 build() {
 	arch-meson "${pkgname}-${pkgver}/" build

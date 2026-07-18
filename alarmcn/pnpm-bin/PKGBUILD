@@ -2,7 +2,7 @@
 # Contributor: mapleafgo <mapleafgo at 163 dot com>
 pkgname=pnpm-bin
 _pkgname=pnpm
-pkgver=11.13.1
+pkgver=11.14.0
 pkgrel=1
 pkgdesc="Fast, disk space efficient package manager (No dependency on nodejs)"
 arch=('x86_64' 'aarch64')
@@ -19,5 +19,5 @@ _app=${_pkgname}-${pkgver}-${CARCH}
 package() {
 	install -Dm755 "${srcdir}/${_app}" "${pkgdir}/usr/bin/pnpm"
 }
-sha256sums_x86_64=('bd6d4b0e14536207ad76bc838f5980cecd968da15f69aae0b207380cca3f2e98')
-sha256sums_aarch64=('b52db99d215ed7dc9563aed815953c62a6c1ffd7cd75803d3a07ad7e4f246aed')
+sha256sums_x86_64=('d78ce4e1ebcc39c1213fcb5a8686eda5b09835195a318408a6361efbd450166d')
+sha256sums_aarch64=('6ec5224012d46e96747caed6b7ea02498f56e838c68df72acd9f8de46969b1a9')
