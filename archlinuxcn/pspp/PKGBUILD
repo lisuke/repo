@@ -10,19 +10,22 @@ arch=('x86_64')
 url='http://www.gnu.org/software/pspp'
 license=('GPL-3.0-or-later')
 depends=(
+  cairo
+  glib2
   gsl
-  gtksourceview3
+  gtk3
+  gtksourceview4
+  libxml2
+  pango
   postgresql-libs
+  readline
   spread-sheet-widget
+  zlib
+  gettext
 )
 makedepends=(
-  gcc13
   glib2-devel
   python
-)
-optdepends=(
-  'zlib: GNUmeric support'
-  'libxml2: GNUMERIC support'
 )
 options=('!libtool' '!emptydirs')
 source=("${pkgname}-${pkgver}.tar.gz::https://ftp.gnu.org/gnu/pspp/${pkgname}-${pkgver}.tar.gz"
@@ -31,10 +34,15 @@ source=("${pkgname}-${pkgver}.tar.gz::https://ftp.gnu.org/gnu/pspp/${pkgname}-${
 sha256sums=('8edbb0f09e8cf8010cad9e0559e0230d7fc5aae4721c756c350554df33024c00'
             'SKIP')
 validpgpkeys=('C2D1AB061656AAC54B5E975485199DE8C6648E90')
+
+prepare() {
+  cd "${pkgname}-${pkgver}"
+  sed -i 's/.*_GL_EXTERN_C.*bsearch.*/#undef bsearch\n&/' gl/stdlib.in.h
+  sed -i 's/.*_GL_EXTERN_C.*wmemchr.*/#undef wmemchr\n&/' gl/wchar.in.h
+}
+
 build() {
   cd "${pkgname}-${pkgver}"
-  CC=gcc-13 \
-  CXX=g++-13 \
   ./configure \
     --prefix=/usr \
     --sysconfdir=/etc
