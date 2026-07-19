@@ -8,7 +8,7 @@ arch=('x86_64' 'aarch64')
 url="https://github.com/WayfireWM/wayfire"
 license=('MIT')
 depends=('cairo' 'pango' 'freetype2' 'glm'
-         'libdrm' 'libevdev' 'libglvnd' 'libinput' 'libjpeg'
+         'libdrm' 'libevdev' 'libglvnd' 'libinput' 'libjpeg-turbo'
          'libpng' 'libxkbcommon' 'libxml2' 'pixman' 'polkit'
          'pkgconf' 'seatd' 'xcb-util-errors' 'xcb-util-renderutil'
          'xcb-util-wm' 'xorg-xwayland' 'wayland' 'wayland-protocols' 'libdisplay-info' 'libvulkan.so' 'liblcms2.so'
