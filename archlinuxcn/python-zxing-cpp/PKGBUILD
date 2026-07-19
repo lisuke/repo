@@ -15,19 +15,10 @@ makedepends=(
     'python-build'
     'python-installer'
     'python-wheel'
-    'python-setuptools>=77'
+    'python-scikit-build-core'
+    'nanobind'
     'cmake>=3.18'
-    'pybind11'
 )
-
-prepare() {
-    cd "${srcdir}/${_name}/wrappers/python"
-    sed -i \
-        -e 's/"pybind11\[global\]"/"pybind11"/' \
-        -e '/"cmake>=3.18"/d' \
-        -e 's/^version = ".*"/version = "'"$pkgver"'"/' \
-        pyproject.toml
-}
 
 build() {
     cd "${srcdir}/${_name}/wrappers/python"
