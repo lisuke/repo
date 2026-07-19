@@ -3,7 +3,7 @@
 
 pkgname=joshuto-git
 _pkgname=joshuto
-pkgver=0.9.9.r20.gd2581fb
+pkgver=0.9.9.r21.ge1002fd
 pkgrel=1
 pkgdesc="ranger-like terminal file manager written in Rust"
 arch=('x86_64' 'aarch64')
