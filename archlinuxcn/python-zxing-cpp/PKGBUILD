@@ -1,15 +1,15 @@
 # Maintainer: Gavin Luo <lunt.luo@gmail.com>
 
 pkgname=python-zxing-cpp
-pkgver=3.0.2
-pkgrel=2
+pkgver=3.1.0
+pkgrel=1
 pkgdesc='Python bindings for zxing-cpp.'
 url='https://github.com/zxing-cpp/zxing-cpp'
 arch=('x86_64')
 license=('Apache-2.0')
 _name=${pkgname#python-}-${pkgver}
 source=("${_name}.tar.gz::${url}/releases/download/v${pkgver}/${_name}.tar.gz")
-b2sums=('b4db9279ca82951a2450bc1d97601e3bd0d560739280f7ab78d6b5572948ef979caaf461ec08e487f413bb06ea5433249735993a5c468f10ff94341a1ce16251')
+b2sums=('14234dd58144e7a9aa0706d2d2d4b5c55e1dd464703bc422275ff1ab5ff7eb351bc9a0cdd59219ffe9a9d534c51c78e287975b17040e932cb8f17c9af07ca968')
 depends=('python')
 makedepends=(
     'python-build'
