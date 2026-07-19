@@ -2,7 +2,7 @@
 
 pkgname=hyprwire-git
 _pkgname=${pkgname%-git}
-pkgver=0.3.1.r5.gdea55bb
+pkgver=0.3.1.r6.g7d935bb
 pkgrel=1
 pkgdesc="A fast and consistent wire protocol for IPC"
 arch=('x86_64')
