@@ -2,7 +2,7 @@
 # Contributor: Andrea Mazzoleni <amadvance@gmail.com>
 
 pkgname=snapraid-daemon
-pkgver=1.13
+pkgver=1.14
 pkgrel=1
 pkgdesc="A background service with a built-in Web UI that automates SnapRAID operations"
 arch=('x86_64')
@@ -12,7 +12,7 @@ depends=('glibc' 'zlib' 'zstd' 'snapraid>=14.1')
 makedepends=('zip')
 backup=('etc/snapraidd.conf')
 source=("https://github.com/amadvance/$pkgname/releases/download/v$pkgver/$pkgname-$pkgver.tar.gz")
-b2sums=('3b476e3dc61d368c6220648deb75cdde1d85434884d578b8d5d9281e75aac562b2fd270fbaa3f318ff01f501a4b55869073bbdf18b83ca896d545d0db67d9e29')
+b2sums=('a22ca8d5a83568ba3acd45017c8b6545aee45f78d44ffd0d4b43cc4a62eaa4b3e448f82f174337e36203d97992f5f18ff3b85795d376fc8be180919ac7107dee')
 
 build() {
   cd "$pkgname-$pkgver"
