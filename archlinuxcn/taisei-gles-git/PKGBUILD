@@ -5,7 +5,7 @@
 
 pkgname=taisei-gles-git
 _pkgname=${pkgname%-gles-git}
-pkgver=1.4.r699.g1bba177
+pkgver=1.4.r714.gd617262
 pkgrel=1
 pkgdesc="Open source Touhou clone (using OpenGL ES backends)"
 arch=('i686' 'x86_64')
