@@ -2,8 +2,8 @@
 
 pkgname=aquamarine-git
 _pkgname=${pkgname%-git}
-pkgver=0.13.0.r0.g9b5f14d
-pkgrel=2
+pkgver=0.13.0.r2.gc0bd9ed
+pkgrel=1
 pkgdesc="A very light linux rendering backend library"
 arch=('x86_64' 'aarch64' 'riscv64')
 url="https://github.com/hyprwm/${_pkgname}"
