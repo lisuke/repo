@@ -3,7 +3,7 @@
 
 pkgname=python-glasgow-git
 epoch=1
-pkgver=r2895.19ed079
+pkgver=r2896.ba06b9d
 pkgrel=1
 pkgdesc="Software for the Glasgow Interface Explorer, the Scots Army Knife for electronics"
 arch=('any')
