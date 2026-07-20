@@ -28,7 +28,7 @@ build() {
 	cd "$pkgname"
 	export RUSTUP_TOOLCHAIN=stable
 	export CARGO_TARGET_DIR=target
-	unset RUSTFLAGS
+	export RUSTFLAGS="-C force-frame-pointers=yes"
 	cargo build --frozen --release
 }
 
