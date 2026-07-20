@@ -9,8 +9,8 @@ pkgdesc="Arch Linux repository manager"
 arch=('any')
 url="https://github.com/lilydjwg/archrepo2"
 license=('MIT')
-depends=('python' 'python-tornado' 'python-pyinotify' 'pacman' 'pyalpm')
-makedepends=('git' 'python-setuptools')
+depends=('python' 'python-pyinotify' 'pacman' 'pyalpm')
+makedepends=('git' 'python-setuptools' 'python-build' 'python-installer')
 source=('git+https://github.com/lilydjwg/archrepo2.git')
 md5sums=('SKIP')
 backup=(etc/archrepo2.ini)
@@ -24,12 +24,12 @@ pkgver() {
 
 build() {
   cd $srcdir/$_gitroot
-  python3 setup.py build
+  python -m build --wheel --no-isolation
 }
 
 package() {
   cd $srcdir/$_gitroot
-  python3 setup.py install --root="$pkgdir" --optimize=1 --skip-build
+  python -m installer --destdir="$pkgdir" dist/*.whl
   install -Dm644 misc/archrepo2.service $pkgdir/usr/lib/systemd/system/archrepo2.service
   install -Dm644 misc/archrepo2.ini.example $pkgdir/etc/archrepo2.ini
 }
