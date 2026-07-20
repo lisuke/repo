@@ -3,7 +3,7 @@
 pkgname=pdfarranger-git
 _pkgname=${pkgname%-git}
 pkgver=1.14.0.r14.g281889b
-pkgrel=1
+pkgrel=2
 pkgdesc="Helps merge or split PDF documents and rotate, crop and rearrange pages"
 arch=('any')
 url="https://github.com/${_pkgname}/${_pkgname}"
