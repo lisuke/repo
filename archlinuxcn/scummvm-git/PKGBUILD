@@ -3,7 +3,7 @@
 
 pkgname=scummvm-git
 _pkgname=scummvm
-pkgver=r177330.af58433037e
+pkgver=r177333.c0e26d83c3e
 pkgrel=1
 pkgdesc="A 'virtual machine' for several classic graphical point-and-click adventure games. - git version"
 arch=('i686' 'x86_64')
