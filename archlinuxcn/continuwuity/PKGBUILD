@@ -2,7 +2,7 @@
 # Contributor: AlphaLynx
 
 pkgname=continuwuity
-pkgdesc="a very cool, featureful fork of conduit (rust matrix homeserver)"
+pkgdesc="Continuwuity, the official community driven continuation of conduwuit & Conduit, focusing on user experience and new features."
 url="https://forgejo.ellis.link/continuwuation/continuwuity"
 license=("Apache-2.0")
 arch=("x86_64" "aarch64")
