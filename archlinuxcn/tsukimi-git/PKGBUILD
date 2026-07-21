@@ -21,6 +21,7 @@ makedepends=(
 	'cargo'
 	'git'
 	'meson'
+	'blueprint-compiler'
 )
 source=(
 	git+https://github.com/tsukinaha/tsukimi.git
