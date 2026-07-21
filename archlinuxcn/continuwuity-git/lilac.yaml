@@ -2,7 +2,7 @@ maintainers:
   - github: Kimiblock
 
 pre_build_script: |
-  aur_pre_build
+  aur_pre_build(maintainers=['Kimiblock', 'ThisIsAsen'])
   vcs_update
 post_build_script: |
   git_pkgbuild_commit()
