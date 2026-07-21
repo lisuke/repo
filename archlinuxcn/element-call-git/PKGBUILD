@@ -17,12 +17,12 @@ backup=()
 
 function prepare() {
 	cd element-call
-	pnpm i
+	pnpm i --pm-on-fail=warn
 }
 
 function build() {
 	cd element-call
-	pnpm build
+	pnpm build --pm-on-fail=warn
 }
 
 function package() {
