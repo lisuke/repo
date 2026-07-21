@@ -2,7 +2,7 @@
 
 _pkgname=keepsecret
 pkgname=keepsecret-git
-pkgver=1.0.0.r193.g95ce368
+pkgver=1.0.0.r194.g8db0400
 pkgrel=1
 pkgdesc='Password manager'
 arch=(x86_64)
