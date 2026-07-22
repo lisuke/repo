@@ -4,7 +4,7 @@
 
 pkgname=kconfig-git
 _pkgname=${pkgname%-git}
-pkgver=6.28.0.r19.g806d2a9
+pkgver=6.28.0.r22.gb39d1b7
 pkgrel=1
 epoch=3
 pkgdesc="Configuration system"
