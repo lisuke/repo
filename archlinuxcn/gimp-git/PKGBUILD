@@ -8,7 +8,7 @@
 pkgname=gimp-git
 _pkgname=${pkgname%-git}
 epoch=2
-pkgver=58642.2d20e737f92
+pkgver=58644.122721c9043
 pkgrel=1
 pkgdesc="GNU Image Manipulation Program (non-conflicting git version)"
 arch=('i686' 'x86_64')
