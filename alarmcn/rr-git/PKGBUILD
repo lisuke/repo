@@ -2,7 +2,7 @@
 # Previous maintainer: Joel Teichroeb <joel@teichroeb.net>
 
 pkgname=rr-git
-pkgver=5.9.0.r163.g39e5c18e
+pkgver=5.9.0.r164.ga009e7e7
 pkgrel=1
 pkgdesc='a nondeterministic debugger'
 arch=(i686 x86_64 aarch64)
